@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protfolio</title>
+    <!-- fontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="./src/cus.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Heebo:wght@200;300;400&family=Mukta:wght@300;500&family=Noto+Sans:wght@300&display=swap');
+
+        *{
+            font-family: 'Mukta', sans-serif;
+        }
+        .clickEffect{
+            cursor:pointer;
+            transition:0.3s;
+        }
+        .clickEffect:active{
+            box-shadow: inset -8px -7px 10px 0 #fff, inset 7px 8px 10px 0 rgb(0 0 0 / 15%);
+        }
+        .navDisplay.active{
+            display: block!important;
+        }
+        .one.active{ 
+            transform-origin: left!important;
+            transform: rotate(40deg)!important;
+            margin-left: 5px;
+        }
+        .two.active{
+            transform: translateX(-30px)!important;
+            opacity: 0!important;
+        }
+        .three.active{ 
+            transform-origin: left!important;
+            transform: rotate(-40deg) !important;
+            margin-left: 5px;
+        }
+        .hoverEffect:hover .hoverEffectImg{
+            transform: scale(1.1);
+        }
+        input:focus{
+            outline: none!important;
+        }
+
+    
+    </style>
+</head>
+<body class="bg-light dark:bg-dark">
+    <div id="home" class="container max-w-[2260px] mx-auto">
+        <header class="max-w-7xl mx-auto flex justify-between items-center px-5 md:px-8 py-8 md:py-10">
+            <div class="text-slate-800/70 dark:text-slate-100/80 text-2xl md:text-3xl ">
+                <a class="font-semibold" href="./index.html">
+                    HARU
+                </a>
+            </div>
+            <div class="scale-75 md:scale-100 mr-[70px] md:mr-0">
+                <button id="dark-switch" onclick="toggleTheme()" class="shadow-inset dark:shadow-dark-inset  w-[72px] flex items-center transition duration-200 rounded-full m-0 bg-slate-100 p-1 overflow-hidden">
+                    <div id="dark-switch-icon" class="bg-slate-light w-8 h-8 rounded-full transform transition duration-200 flex justify-center items-center border dark:border-slate-700">
+                        <i class="fa-regular fa-sun"></i>
+                    </div>
+                    <h6 id="dark-text" class="text-light dark:text-slate-900 translate-x-1"></h6>
+                </button>
+            </div>
+            <nav class="scale-75 md:scale-100 fixed z-50 top-4 md:top-6 right-5">
+                <div class="w-16 h-16 flex justify-center items-center dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:md:shadow-dark-extra md:shadow-extra rounded-full navIcon clickEffect cursor-pointer z-50 bg-white  md:bg-light dark:bg-[#363636] dark:md:bg-dark">
+                    <div class="relative w-8 h-6  flex items-center ">
+                        <div class="absolute w-8 h-1 duration-500 top-0 bg-slate-600/70 dark:bg-slate-100/80 rounded-full one"></div>
+                        <div class="absolute w-8 h-1 duration-500 bg-slate-600/70 dark:bg-slate-100/80 rounded-full two"></div>
+                        <div class="absolute w-8 h-1 duration-500 bottom-0 bg-slate-600/70 dark:bg-slate-100/80 rounded-full three"></div>
+                    </div>
+                </div>
+            </nav>
+            <div class="scale-75 md:scale-100 fixed z-20 bottom-5 right-5">
+                <a href="#home">
+                    <div class="w-16 h-16 flex justify-center items-center dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:md:shadow-dark-extra md:shadow-extra rounded-full navIcon clickEffect cursor-pointer z-50 bg-white mdshadow-extra md:bg-light text-2xl dark:bg-[#363636] dark:md:bg-dark dark:text-white text-slate-800/80 dark:text-slate-100/80">
+                        <i class="fas fa-angle-up"> </i>
+                    </div>
+                </a>
+            </div>
+        </header>
+
+        <!-- //navDisplay -->
+        <div class="max-w-[2260px] hidden navDisplay mx-auto min-h-screen fixed top-0  bg-light dark:bg-dark w-full ">
+            <div class="relative w-full h-full max-w-7xl mx-auto z-50">
+                <div class="absolute top-0 h-screen w-full z-50">
+                    <div class="flex justify-center items-center h-full">
+                        <div class=" flex flex-col gap-y-10">
+                            <a href="./index.html" class="px-5 py-3 md:px-8 md:py-4 rounded-2xl clickEffect dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:shadow-dark-extra shadow-extra  text-lg text-center text-slate-800/70 dark:text-slate-100/80">
+                                Home
+                            </a>
+                            <a href="./src/about.html" class="px-5 py-3 md:px-8 md:py-4 rounded-2xl clickEffect dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:shadow-dark-extra shadow-extra  text-lg text-center text-slate-800/70 dark:text-slate-100/80">
+                                About
+                            </a>
+                            <a href="./src/projects.html" class="px-5 py-3 md:px-8 md:py-4 rounded-2xl clickEffect dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:shadow-dark-extra shadow-extra text-center text-lg  text-slate-800/70 dark:text-slate-100/80">
+                                Projects
+                            </a>
+                            <a href="./src/contact.html" class="px-5 py-3 md:px-8 md:py-4 rounded-2xl clickEffect dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:shadow-dark-extra shadow-extra  text-lg text-center text-slate-800/70 dark:text-slate-100/80">
+                                Contact Me
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <main class="">
+            <!-- Hero -->
+            <section class="px-6 md:px-8 lg:px-0 max-w-7xl mx-auto py-20">
+                <article class="flex flex-col-reverse lg:grid lg:grid-cols-2 ">
+                    <div class="flex items-center justify-center lg:justify-start mt-12 lg:mt-0">
+                        <div class="text-center lg:text-start headline">
+                            <h3 class="text-slate-800/70 dark:text-slate-100/80 text-4xl lg:text-[3rem] max-w-md mx-auto lg:mx-0 font-bold">
+                                Hi I'm Haru.
+                                Frontend Web Developer.
+                            </h3>
+                            <p class="text-slate-400 max-w-md mt-10 text-lg"> 
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim eros elementum tristiquecursus.
+                            </p>
+                            <div class="btn text-slate-600 dark:text-slate-400/80 flex flex-col-reverse md:flex-row md:flex md:items-center gap-x-8 mt-10">
+                                <div class="mt-12 md:mt-0">
+                                    <a href="./src/contact.html" class="px-5 lg:px-8 py-3 md:py-5 rounded-2xl dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:shadow-dark-extra shadow-extra clickEffect text-xl">
+                                        <i class="fas fa-arrow-right mr-2 "></i>
+                                        Get In Touch
+                                    </a>
+                                </div>
+                                <div class="flex justify-center md:justify-start items-center gap-x-5">
+                                    <a target="_blank" href="https://github.com/haru2004github" class="w-12 h-12 flex justify-center items-center dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:shadow-dark-extra shadow-extra rounded-full clickEffect">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a target="_blank" href="https://www.messenger.com/" class="w-12 h-12 flex justify-center items-center dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:shadow-dark-extra shadow-extra rounded-full clickEffect">
+                                        <i class="fab fa-facebook-messenger"></i>
+                                    </a>
+                                    <a target="_blank" href="" class="w-12 h-12 flex justify-center items-center dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:shadow-dark-extra shadow-extra rounded-full clickEffect">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100074160818204" class="w-12 h-12 flex justify-center items-center dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:shadow-dark-extra shadow-extra rounded-full clickEffect">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center headline">
+                        <div class=" overflow-hidden animatedBorder dark:shadow-dark-extra shadow-extra p-5 ">
+                            <div class="overflow-hidden max-w-[400px] max-h-[400px] animatedBorder border border-slate-700/50">
+                                <img class="w-full" src="./dist/img/Me.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+    
+            <!-- about Me -->
+            <section class="px-6 md:px-8 lg:px-0 max-w-7xl mx-auto py-20 ">
+                <article class="grid gap-y-8 md:gap-y-0 md:grid-cols-3 headline">
+                    <div class="col-span-2">
+                        <div class="p-6 lg:p-12 rounded-3xl dark:shadow-dark-extra shadow-extra ">
+                            <h1 class="text-[#555555]/90 dark:text-slate-400 font-bold flex items-center gap-x-3 text-3xl lg:text-5xl">
+                                <span>About Me </span><i class="fas text-2xl fa-hand"></i>
+                            </h1>
+                            <p class="mt-8 text-slate-400 text-xl lg:text-2xl font-thin">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex h-full justify-end items-end"> 
+                        <a href="./src/about.html" class="px-5 py-3 lg:px-8 lg:py-5 rounded-2xl clickEffect dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:shadow-dark-extra shadow-extra  text-xl float-right dark:text-slate-100/80">
+                            <i class="fas fa-arrow-right mr-2"></i>
+                            More about me
+                        </a>
+                    </div>
+                </article>
+            </section>
+    
+            <!-- service -->
+            <section class="px-6 md:px-8 lg:px-0 max-w-7xl mx-auto py-20">
+                <h1 class="text-[#555555]/90 dark:text-slate-400 font-bold flex items-center gap-x-3 text-3xl lg:text-5xl dark:text-slate-100/80 headline">
+                    <span>My Service</span>
+                </h1>
+                <article class="grid md:grid-cols-2 lg:grid-cols-3 gap-y-8 lg:gap-y-0 gap-x-8 mt-12">
+                    <div class="rounded-3xl dark:shadow-dark-extra shadow-extra p-6 lg:p-10 text-slate-700/70 dark:text-slate-100/90 headline">
+                        <i class="fas text-xl fa-layer-group"></i>
+                        <h3 class="text-xl md:text-2xl mt-5">3D animations </h3>
+                        <p class="text-slate-400 max-w-md mt-5 text-lg"> 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor
+                        </p>
+                    </div>
+    
+                    <div class="rounded-3xl dark:shadow-dark-extra shadow-extra p-6 lg:p-10 text-slate-700/70 dark:text-slate-100/90 headline">
+                        <i class="fas text-xl fa-box"></i>
+                        <h3 class="text-xl md:text-2xl mt-5">3D modeling </h3>
+                        <p class="text-slate-400 max-w-md mt-5 text-lg"> 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor
+                        </p>
+                    </div>
+    
+                    <div class="rounded-3xl dark:shadow-dark-extra shadow-extra p-6 lg:p-10 text-slate-700/70 dark:text-slate-100/90 headline">
+                        <i class="fas text-xl fa-triangle-circle-square"></i>
+                        <h3 class="text-xl md:text-2xl mt-5">3D rendering </h3>
+                        <p class="text-slate-400 max-w-md mt-5 text-lg"> 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor
+                        </p>
+                    </div>
+                </article>
+            </section>
+    
+            <!-- portfolio -->
+            <section class="px-6 md:px-8 lg:px-0 max-w-7xl mx-auto py-20">
+                <h1 class="text-[#555555]/90 dark:text-slate-400 font-bold flex items-center gap-x-3 text-3xl lg:text-5xl headline">
+                    <span>Last 2 projects</span>
+                </h1>
+                <article class="grid md:grid-cols-2 gap-y-8 md:gap-y-0 gap-x-8 lg:gap-14 mt-20">
+                    <div class= "dark:shadow-dark-extra shadow-extra rounded-3xl overflow-hidden p-5 lg:p-8 hoverEffect headline">
+                        <div class="w-full rounded-3xl dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:shadow-dark-extra shadow-extra overflow-hiddenmd:p-3 lg:p-4">
+                            <a  href="https://framer-site-teal.vercel.app/" >
+                                <div class="overflow-hidden rounded-2xl border border-slate-300/50">
+                                    <img class="duration-300 w-full hoverEffectImg" src="./dist/img/framer-site-teal.vercel.app_.png" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="grid mt-8 p-3 lg:grid-cols-2 ">
+                            <div class="">
+                                <h3 class="text-slate-700/90 dark:text-slate-100/90">4weeks ago</h3>
+                                <h3 class="text-3xl mt-5 dark:text-slate-100/80">Framer Sites </h3>
+                                <p class="text-slate-400 max-w-md mt-3 text-lg"> 
+                                    Html , Css , Js , Tailwind Css
+                                </p>
+                            </div>
+                            <div class="flex lg:justify-end lg:items-end mt-6 lg:mt-0"> 
+                                <a target="_blank" href="https://framer-site-teal.vercel.app/" class="px-5 py-3 rounded-2xl clickEffect dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:shadow-dark-extra shadow-extra  text-lg float-right text-slate-800 dark:text-slate-100/80">
+                                    <i class="fas fa-arrow-right mr-2"></i>
+                                    View Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class= " dark:shadow-dark-extra shadow-extra rounded-3xl overflow-hidden p-5 lg:p-8 hoverEffect headline">
+                        <div class="w-full rounded-3xl dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:shadow-dark-extra shadow-extra overflow-hidden p-3 lg:p-4">
+                            <a href="https://lunaparadise.netlify.app/">
+                                <div class="overflow-hidden rounded-2xl border border-slate-300/50">
+                                    <img class="duration-300 w-full hoverEffectImg" src="./dist/img/lunaparadise.netlify.app_.png" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="grid mt-8 p-3 lg:grid-cols-2">
+                            <div class="">
+                                <h3 class="text-slate-700/90 dark:text-slate-100/90">4weeks ago</h3>
+                                <h3 class="text-3xl mt-5 dark:text-slate-100/80">Portfolio</h3>
+                                <p class="text-slate-400 max-w-md mt-3 text-lg"> 
+                                    Html , Css , Js , Tailwind Css
+                                </p>
+                            </div>
+                            <div class="flex lg:justify-end lg:items-end mt-6 lg:mt-0"> 
+                                <a target="_blank" href="https://lunaparadise.netlify.app/" class="px-5 py-3 rounded-2xl clickEffect dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:shadow-dark-extra shadow-extra  text-lg float-right text-slate-800 dark:text-slate-100/80">
+                                    <i class="fas fa-arrow-right mr-2"></i>
+                                    View Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="flex justify-end mt-14 headline">
+                        <a target="_blank" href="./src/projects.html" class="px-5 py-3 md:px-8 md:py-5 rounded-2xl clickEffect dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:shadow-dark-extra shadow-extra  text-lg float-right text-slate-800 dark:text-slate-100/80">
+                            <i class="fas fa-arrow-right mr-2"></i>
+                            View More Projects
+                        </a>
+                    </div>
+                </article>
+            </section>
+            
+            <!-- contact me -->
+            <section class="px-6 md:px-8 lg:px-0 mx-auto max-w-7xl py-20">
+                <h1 class="text-[#555555]/90 dark:text-slate-400 font-bold flex items-center gap-x-3 text-3xl lg:text-5xl headline">
+                    <span>Achievements</span>
+                </h1>
+                <article class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-y-0 lg:gap-x-6 py-14">
+                    <div class="p-6 rounded-3xl  dark:shadow-dark-extra shadow-extra headline">
+                        <h3 class="text-slate-800/80 dark:text-slate-100/80 font-bold text-3xl lg:text-5xl">12+</h3>
+                        <p class="text-slate-500 mt-4 text-xl md:text-2xl">
+                            Years of Experience
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-3xl  dark:shadow-dark-extra shadow-extra headline">
+                        <h3 class="text-slate-800/80 dark:text-slate-100/80 font-bold text-3xl lg:text-5xl">20+</h3>
+                        <p class="text-slate-500 mt-4 text-xl md:text-2xl">
+                            Years of Experience
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-3xl  dark:shadow-dark-extra shadow-extra headline">
+                        <h3 class="text-slate-800/80 dark:text-slate-100/80 font-bold text-3xl lg:text-5xl">12+</h3>
+                        <p class="text-slate-500 mt-4 text-xl md:text-2xl">
+                            Happy Client
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-3xl  dark:shadow-dark-extra shadow-extra headline">
+                        <h3 class="text-slate-800/80 dark:text-slate-100/80 font-bold text-3xl lg:text-5xl">200+</h3>
+                        <p class="text-slate-500 mt-4 text-xl md:text-2xl">
+                            Followers
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <div class="p-8 lg:p-14 dark:shadow-dark-extra shadow-extra rounded-3xl headline ">
+                        <h3 class="text-[#555555]/90 dark:text-slate-400 text-3xl lg:text-5xl text-center lg:max-w-xl mx-auto">
+                            Want to create something awesome?
+                            Drop me an email.
+                        </h3>
+                        <div class="flex justify-center mt-8">
+                            <a href="mailto:hponepyaesone9620@gmail.com" class="px-5 lg:px-8 py-5 rounded-2xl clickEffect dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:shadow-dark-extra shadow-extra  text-lg  text-slate-800/70 dark:text-slate-100/80">
+                                <i class="hidden md:inlinefas fa-envelope mr-2"></i>
+                                hponepyaesone9620@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+    
+        <!-- footer  -->
+        <footer class="px-6 md:px-8 max-w-7xl mx-auto border-t-2 border-t-slate-800/10">
+            <section class=" max-w-7xl mx-auto py-20 ">
+                <article class="grid md:grid-cols-2 gap-x-8 lg:gap-x-0 lg:grid-cols-3">
+                    <div class="headline ">
+                        <div class="">
+                            <h3 class="text-[#555555]/90 dark:text-slate-400 text-4xl">Haru</h3>
+                            <p class="mt-8 text-slate-400 text-xl font-thin">
+                                Be original with Nancy, a premium portfolio template created for creative professionals. Made with the Neumorphism design style, which makes the website memorable, with a clean and minimal visual.
+                            </p>
+                            <div class="flex items-center gap-x-5 text-slate-800/70 dark:text-slate-100/80 mt-6">
+                                <a target="_blank" href="https://github.com/haru2004github" class="w-12 h-12 flex justify-center items-center dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:shadow-dark-extra shadow-extra rounded-full clickEffect">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a target="_blank" href="https://www.messenger.com/" class="w-12 h-12 flex justify-center items-center dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:shadow-dark-extra shadow-extra rounded-full clickEffect">
+                                    <i class="fab fa-facebook-messenger"></i>
+                                </a>
+                                <a target="_blank" href="" class="w-12 h-12 flex justify-center items-center dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:shadow-dark-extra shadow-extra rounded-full clickEffect">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a target="_blank" href="https://www.facebook.com/profile.php?id=100074160818204" class="w-12 h-12 flex justify-center items-center dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:shadow-dark-extra shadow-extra rounded-full clickEffect">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="headline hidden lg:block"></div>
+                    <div class="headline mt-12 md:mt-0">
+                        <div class="">
+                            <h4 class="text-slate-500/90 text-2xl">Subscribe to my newsletter</h4>
+                            <input class="bg-light dark:bg-dark dark:shadow-dark-inset shadow-inset w-full px-5 lg:px-8 py-5 mt-5 text-slate-800/80 dark:text-slate-100/80 rounded-2xl text-lg" placeholder="Email address" type="text">
+                            <div class="mt-8 lg:mt-14">
+                                <a href="malto:hponepyaesone9620@gmail.com" class=" px-5 lg:px-8 py-3 md:py-4 rounded-2xl clickEffect dark:hover:shadow-dark-ultra dark:active:shadow-dark-inset dark:shadow-dark-extra shadow-extra  text-lg  text-slate-800/70 dark:text-slate-100/80">
+                                    <i class="fas fa-envelope mr-2"></i>
+                                    Subscribe
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="headline flex justify-between items-center mt-14 text-sm">
+                    <h3 class="text-slate-500/80">Copyright by <a class="text-slate-600/80 text-lg" href="https://webflow.com/">Webflow</a></h3>
+                    <h3 class="text-slate-500/80">Created By <span class="text-slate-600/80 text-lg">Haru</span></h3>
+                </article>
+            </section>
+        </footer>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./src/style.js"></script>
+</html>

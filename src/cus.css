@@ -1,0 +1,60 @@
+
+/* .shadow-extra{
+    box-shadow: 7px 7px 15px 0 rgb(0 0 0 / 12%), -7px -7px 15px 0 #fff;
+} */
+
+
+.clickEffect:hover{
+    box-shadow: 11px 11px 18px 0 rgb(0 0 0 / 12%), -11px -11px 18px 0 #fff;
+}
+
+.shadow-curve{
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.progressOne{
+    background-image: conic-gradient(#f19046 3.6deg,#f1f1f1 0deg);
+    
+}
+.progressTwo{
+    background-image: conic-gradient(#586af3 3.6deg,#f1f1f1 0deg);
+    
+}
+.progressThree{
+    background-image: conic-gradient(#f1ff19 35.6deg,#f1f1f1 0deg);
+    
+}
+.progressFour{
+    background-image: conic-gradient(#8d41f6 3.6deg,#f1f1f1 0deg);
+    
+}
+.progressFive{
+    background-image: conic-gradient(#38bdf8 3.6deg,#f1f1f1 0deg);
+    
+}
+.progressSix{
+    background-image: conic-gradient(#2be541 35.6deg,#f1f1f1 0deg);
+    
+}
+
+.animatedBorder{
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    background-position-x: left;
+    animation: animatedBorder 4s alternate infinite;
+}
+
+@keyframes animatedBorder{
+    0%{
+        background-position-x: left;
+
+        border-radius: 55% 45% 51% 49% / 32% 63% 37% 68% ;
+    }
+    50%{
+        background-position-x: center;
+        border-radius:43% 57% 53% 47% / 60% 59% 41% 40%  
+    }
+    100%{
+        background-position-x: right;
+        border-radius:47% 53% 46% 54% / 47% 42% 58% 53%  ;
+    }
+}
